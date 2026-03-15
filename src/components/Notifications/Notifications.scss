@@ -1,0 +1,45 @@
+@import '../../styles/app';
+
+.notifications {
+  @include media-breakpoint-up(md) {
+    width: 343px;
+  }
+
+  height: 100%;
+  border: none;
+
+  .cardHeader {
+    border-radius: 0;
+    padding: 1rem;
+    border-bottom: none;
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .listGroup {
+    .listGroupItem:first-child {
+      border: none;
+    }
+
+    .listGroupItem:nth-child(2) {
+      border-top: none;
+    }
+  }
+
+  .cardFooter {
+    padding: 14px 1rem;
+    border-top: none;
+  }
+
+  .btnNotificationsReload {
+    color: $navbar-link-color;
+    outline: none;
+
+    i::before {
+      top: 2px;
+    }
+  }
+}

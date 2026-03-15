@@ -1,0 +1,30 @@
+@import '../../../styles/app';
+
+.dynamic-tables {
+  th {
+    font-size: $font-size-sm;
+    color: theme-color('inverse');
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .width-100 {
+    width: 100px;
+  }
+
+  thead tr:last-child th {
+    padding-top: 0.5rem;
+  }
+
+  .progress {
+    height: 0.5rem;
+    min-width: 100px;
+  }
+}

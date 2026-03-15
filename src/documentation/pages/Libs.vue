@@ -1,0 +1,510 @@
+<template>
+  <div class="row">
+    <div class="col-lg-9 col-12">
+      <Widget id="Animate-css">
+        <h3>Animate.css</h3>
+        <p>
+          animate.css is a bunch of cool, fun, and cross-browser animations for you to use in your projects. Great
+          for emphasis, home pages, sliders, and general just-add-water-awesomeness.
+        </p>
+        <h4>Example</h4>
+        <h1 class="animated infinite fadeIn slow mt mb">
+          Fade in
+        </h1>
+        <pre><code>&lt;h1 class="animated infinite fadeIn slow"&gt;Fade in&lt;/h1&gt;</code></pre>
+        <p>
+          For more examples please refer to <a
+            href="https://github.com/daneden/animate.css/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Animate.css</a>
+        </p>
+      </Widget>
+      <Widget id="Bootstrap-Slider">
+        <h3>Bootstrap Range Slider</h3>
+        <p>Native Bootstrap 5 range input for Vue.js</p>
+        <h4>Example</h4>
+        <input
+          type="range"
+          class="form-range"
+          :value="14"
+          min="0"
+          max="20"
+        >
+        <pre><code>&lt;input type="range" class="form-range" :value="14" min="0" max="20" /&gt;</code></pre>
+        <p>
+          For more examples please refer to <a
+            href="https://getbootstrap.com/docs/5.3/forms/range/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Bootstrap Range</a>
+        </p>
+      </Widget>
+      <Widget id="Font-Awesome">
+        <h3>Font-awesome</h3>
+        <p>The iconic SVG, font, and CSS toolkit</p>
+        <h4>Examples</h4>
+        <i class="fa fa-arrow-left fa-2x me-1" />
+        <i class="fa fa-github fa-2x me-1" />
+        <i class="fa fa-bath fa-2x me-1" />
+        <i class="fa fa-grav fa-2x me-1" />
+        <i class="fa fa-telegram fa-2x" />
+        <pre><code>{{ fontAwesomeCode }}</code></pre>
+        <p class="lead">
+          Want to see examples?
+          <router-link to="/app/components/icons">
+            Click
+          </router-link>
+        </p>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://github.com/FortAwesome/Font-Awesome"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Font
+            Awesome</a>
+        </p>
+      </Widget>
+      <Widget id="Glyphicons-Halflings">
+        <h3>Glyphicons-halflings</h3>
+        <p>Includes over 250 glyphs in font format from the Glyphicon Halflings set</p>
+        <h4>Examples</h4>
+        <i class="glyphicon glyphicon-asterisk me-1" />
+        <i class="glyphicon glyphicon-heart me-1" />
+        <i class="glyphicon glyphicon-home me-1" />
+        <i class="glyphicon glyphicon-refresh me-1" />
+        <i class="glyphicon glyphicon-camera" />
+        <pre><code>{{ glyphiconCode }}</code></pre>
+        <p class="lead">
+          Want to see examples?
+          <router-link to="/app/ui/icons">
+            Click
+          </router-link>
+        </p>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://getbootstrap.com/docs/3.3/components/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Glyphicons</a>
+        </p>
+      </Widget>
+      <Widget id="Line-Awesome">
+        <h3>Line-awesome</h3>
+        <p>A single file that replaces Font Awesome with modern line icons.</p>
+        <h4>Examples</h4>
+        <i class="la la-arrow-left la-2x me-0" />
+        <i class="la la-github la-2x me-0" />
+        <i class="la la-facebook la-2x me-0" />
+        <pre><code>{{ lineAwesomeCode }}</code></pre>
+        <p class="lead">
+          Want to see examples?
+          <router-link to="/app/ui/icons">
+            Click
+          </router-link>
+        </p>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://github.com/icons8/line-awesome"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Line Awesome</a>
+        </p>
+      </Widget>
+      <Widget id="Markdown-Editor">
+        <h3>Markdown Editor</h3>
+        <p>A markdown editor based on Vue that supports a variety of personalized features</p>
+        <h4>Example</h4>
+        <MdEditor
+          v-model="mdContent"
+          language="en-US"
+          :preview="false"
+        />
+        <pre><code>&lt;MdEditor v-model="mdContent" language="en-US" :preview="false" /&gt;</code></pre>
+        <p class="lead">
+          Want to see examples?
+          <router-link to="/app/ui/icons">
+            Click
+          </router-link>
+        </p>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://github.com/imzbf/md-editor-v3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >MD Editor V3</a>
+        </p>
+      </Widget>
+      <Widget id="Skycons">
+        <h3>Skycons</h3>
+        <p>
+          Skycons is a set of ten animated weather glyphs, procedurally generated by JavaScript using the HTML5 canvas
+          tag.
+        </p>
+        <Skycon
+          icon="CLEAR_DAY"
+          color="#17a2b8"
+          width="40"
+          height="40"
+        />
+        <pre><code>&lt;Skycon icon="CLEAR_DAY" color="#17a2b8" width="40" height="40"/&gt;</code></pre>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://github.com/darkskyapp/skycons"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Skycons</a>
+        </p>
+      </Widget>
+      <Widget id="Maska">
+        <h3>Maska</h3>
+        <p>Tiny input mask library for Vue.js 3</p>
+        <input
+          id="int-phone-mask"
+          v-model="intPhoneModel"
+          v-maska
+          class="form-control"
+          type="text"
+          placeholder="+___ ___ ___ ___"
+          data-maska="+### ### ### ###"
+        >
+        <pre><code>&lt;input class="form-control" id="int-phone-mask" type="text"
+  placeholder="+___ ___ ___ ___"
+  v-maska
+  data-maska="+### ### ### ###"
+  v-model="intPhoneModel"/&gt;</code></pre>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://github.com/beholdr/maska"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Maska</a>
+        </p>
+      </Widget>
+      <Widget id="Color-Picker">
+        <h3>Color Picker</h3>
+        <p>Native HTML5 color picker input.</p>
+        <div
+          class="input-group colorpicker-wrapper"
+          style="max-width: 300px;"
+        >
+          <input
+            type="text"
+            class="form-control"
+            :value="color"
+          >
+          <input
+            v-model="color"
+            type="color"
+            class="form-control form-control-color"
+          >
+        </div>
+        <pre><code>{{ colorPickerCode }}</code></pre>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color"
+            target="_blank"
+            rel="noopener noreferrer"
+          >MDN Color Input</a>
+        </p>
+      </Widget>
+      <Widget id="Native-Select">
+        <h3>Native Select</h3>
+        <p>Bootstrap 5 native select component</p>
+        <select
+          v-model="defaultSelect"
+          class="form-select"
+          style="max-width: 300px;"
+        >
+          <option value="Large Magellanic Cloud">
+            Large Magellanic Cloud
+          </option>
+          <option value="Andromeda Galaxy">
+            Andromeda Galaxy
+          </option>
+          <option value="SextansA">
+            SextansA
+          </option>
+        </select>
+        <pre><code>&lt;select class="form-select" v-model="defaultSelect"&gt;
+  &lt;option value="Large Magellanic Cloud"&gt;Large Magellanic Cloud&lt;/option&gt;
+  &lt;option value="Andromeda Galaxy"&gt;Andromeda Galaxy&lt;/option&gt;
+  &lt;option value="SextansA"&gt;SextansA&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://getbootstrap.com/docs/5.3/forms/select/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Bootstrap Select</a>
+        </p>
+      </Widget>
+      <Widget id="Textarea-Autosize">
+        <h3>Auto-resize Textarea</h3>
+        <p>Native textarea with CSS-based auto-resize functionality</p>
+        <textarea
+          id="autosize-textarea"
+          placeholder="Try to add few new lines..."
+          class="form-control"
+          rows="3"
+          @input="autoResize"
+        />
+        <pre><code>&lt;textarea
+  placeholder="Try to add few new lines..."
+  class="form-control"
+  rows="3"
+  @input="autoResize"
+&gt;&lt;/textarea&gt;</code></pre>
+        <p>For more examples please refer to CSS auto-resize techniques</p>
+      </Widget>
+      <Widget id="Vue-Datepicker">
+        <h3>Vue Datepicker</h3>
+        <p>The most complete datepicker solution for Vue 3</p>
+        <VueDatePicker
+          v-model="datepickerValue"
+          :enable-time-picker="false"
+          auto-apply
+          placeholder="Select date"
+        />
+        <pre><code>&lt;VueDatePicker
+  v-model="datepickerValue"
+  :enable-time-picker="false"
+  auto-apply
+  placeholder="Select date"
+/&gt;</code></pre>
+        <p>
+          For more examples and documentation please refer to <a
+            href="https://vue3datepicker.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Vue Datepicker</a>
+        </p>
+      </Widget>
+      <Widget id="Other">
+        <h3 class="">
+          Other Libs
+        </h3>
+        <ul class="check-list">
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://www.amcharts.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > @amcharts</a>.
+            JavaScript Charts & Maps Programming library for all your data visualization needs.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://tiptap.dev/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > @tiptap</a>.
+            A headless, framework-agnostic and extendable rich text editor.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://fullcalendar.io/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > @fullcalendar/vue3</a>.
+            The most popular full-sized JavaScript Calendar.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://apexcharts.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > vue3-apexcharts</a>.
+            Modern & Interactive Open-source Charts.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://getbootstrap.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > bootstrap 5</a>.
+            The most popular CSS framework for responsive, mobile-first development.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://echarts.apache.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > vue-echarts</a>.
+            Apache ECharts component for Vue.js.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://vcalendar.io/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > v-calendar</a>.
+            An elegant calendar and datepicker plugin for Vue.js.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://swiperjs.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > swiper</a>.
+            The most modern free mobile touch slider.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://tanstack.com/table/latest"
+              rel="noopener noreferrer"
+              target="_blank"
+            > @tanstack/vue-table</a>.
+            Headless UI for building powerful tables & datagrids.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://vue3datepicker.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > @vuepic/vue-datepicker</a>.
+            The most complete datepicker solution for Vue 3.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://github.com/SortableJS/vue.draggable.next"
+              rel="noopener noreferrer"
+              target="_blank"
+            > vuedraggable</a>.
+            Vue drag-and-drop component based on Sortable.js.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://vue-toastification.maronato.dev/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > vue-toastification</a>.
+            Light, easy and beautiful toasts for Vue 3.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://vue3-google-map.vercel.app/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > vue3-google-map</a>.
+            Google Maps component for Vue 3.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://photoswipe.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > photoswipe</a>.
+            JavaScript image gallery and lightbox.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://driverjs.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > driver.js</a>.
+            A light-weight, no-dependency, vanilla JavaScript engine to drive user's focus.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://www.highcharts.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            > highcharts-vue</a>.
+            Official Highcharts wrapper for Vue.js.
+          </li>
+          <li class="lead">
+            <a
+              class="fw-semi-bold"
+              href="https://github.com/jizai1125/vue-countup-v3"
+              rel="noopener noreferrer"
+              target="_blank"
+            > vue-countup-v3</a>.
+            A Vue 3 component wrapper around CountUp.js for animated counting.
+          </li>
+        </ul>
+      </Widget>
+    </div>
+    <div class="col-lg-3 col-12">
+      <Scrollspy
+        title="LIBS"
+        :ids="[
+          'Animate-css',
+          'Bootstrap-Slider',
+          'Font-Awesome',
+          'Glyphicons-Halflings',
+          'Line-Awesome',
+          'Markdown-Editor',
+          'Skycons',
+          'Maska',
+          'Color-Picker',
+          'Native-Select',
+          'Textarea-Autosize',
+          'Vue-Datepicker',
+          'Other'
+        ]"
+      />
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import Widget from '@/components/Widget/Widget.vue'
+import Scrollspy from '@/documentation/components/Scrollspy/Scrollspy.vue'
+import Skycon from '@/components/Skycon/Skycon.vue'
+import { MdEditor } from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
+import { VueDatePicker } from '@vuepic/vue-datepicker'
+import '@vuepic/vue-datepicker/dist/main.css'
+import { vMaska } from 'maska/vue'
+
+const color = ref('#cccccc')
+const intPhoneModel = ref(null)
+const datepickerValue = ref(null)
+const defaultSelect = ref('Andromeda Galaxy')
+const mdContent = ref('')
+
+const fontAwesomeCode = `<i class="fa fa-arrow-left fa-2x me-0"></i>
+<i class="fa fa-github fa-2x me-0"></i>
+<i class="fa fa-bath fa-2x me-0"></i>
+<i class="fa fa-grav fa-2x me-0"></i>
+<i class="fa fa-telegram fa-2x"></i>`
+
+const glyphiconCode = `<i class="glyphicon glyphicon-asterisk me-0"></i>
+<i class="glyphicon glyphicon-heart me-0"></i>
+<i class="glyphicon glyphicon-home me-0"></i>
+<i class="glyphicon glyphicon-refresh me-0"></i>
+<i class="glyphicon glyphicon-camera"></i>`
+
+const lineAwesomeCode = `<i class="la la-arrow-left la-2x me-0"></i>
+<i class="la la-github la-2x me-0"></i>
+<i class="la la-facebook la-2x me-0"></i>`
+
+const colorPickerCode = `<div class="input-group colorpicker-wrapper">
+  <input type="text" class="form-control" :value="color" />
+  <input type="color" class="form-control form-control-color" v-model="color" />
+</div>`
+
+function autoResize(event) {
+  const textarea = event.target
+  textarea.style.height = 'auto'
+  textarea.style.height = textarea.scrollHeight + 'px'
+}
+</script>
