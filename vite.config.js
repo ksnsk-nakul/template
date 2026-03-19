@@ -42,5 +42,5 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
   },
-  base: process.env.NODE_ENV === 'production' ? '/sing-app-vue/' : '/',
+  base: '/',
 })
