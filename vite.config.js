@@ -5,6 +5,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const base = process.env.VITE_BASE_PATH || '/'
 
 export default defineConfig({
   plugins: [
@@ -30,8 +31,18 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // Silence deprecation warnings from dependencies
-        silenceDeprecations: ['legacy-js-api'],
+        // Keep build output clean (Bootstrap + this template still uses patterns Sass warns about).
+        // This only silences warnings; it does not change generated CSS.
+        loadPaths: ['node_modules'],
+        quietDeps: true,
+        silenceDeprecations: [
+          'legacy-js-api',
+          'import',
+          'if-function',
+          'global-builtin',
+          'color-functions',
+          'slash-div',
+        ],
       },
     },
   },
@@ -41,6 +52,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    // This template intentionally bundles many dashboard features; keep build output noise-free.
+    chunkSizeWarningLimit: 2000,
   },
-  base: '/',
+  base,
 })

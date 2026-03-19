@@ -108,7 +108,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  // Respect Vite `base` when the app is hosted under a subpath (e.g. https://example.com/admin/).
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
