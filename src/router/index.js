@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { isAuthenticated } from '@/utils/auth'
 
 // Import route modules
@@ -107,9 +107,16 @@ const routes = [
   }
 ]
 
+const routerMode = import.meta.env.VITE_ROUTER_MODE || (import.meta.env.PROD ? 'hash' : 'history')
+
 const router = createRouter({
-  // Respect Vite `base` when the app is hosted under a subpath (e.g. https://example.com/admin/).
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // If Apache/Nginx isn’t configured to rewrite all routes to index.html, browser refresh on deep links 404s.
+  // Default production builds to hash mode so static hosting “just works”.
+  // To keep clean URLs, set `VITE_ROUTER_MODE=history` and configure server rewrites to `index.html`.
+  history:
+    routerMode === 'hash'
+      ? createWebHashHistory(import.meta.env.BASE_URL)
+      : createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
